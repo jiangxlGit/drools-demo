@@ -1,0 +1,10 @@
+package com.biaopu.droolsdemo.bean
+import com.biaopu.droolsdemo.bean.People
+dialect  "java"
+
+rule "girl"
+    when
+        $p : People(sex == 0 && drlType == "people")
+    then
+        System.out.println($p.getName() + "是女孩");
+end
